@@ -30,10 +30,12 @@ exports.handler = function (context, event, callback) {
 
   // End-user did not enter anything ...
   if (event.Timeout == 1) {
-    twiml.say('Thanks for calling Red Carpet Car Wash, goodbye.');
+    // twiml.say('Thanks for calling Red Carpet Car Wash, goodbye.');
+    gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Goodbye.mp3');
     twiml.hangup();
   } else {
-    twiml.say('Sorry, I didn\'t get your response.');
+    // twiml.say('Sorry, I didn\'t get your response.');
+    gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Didnt_Hear_Response.mp3');
     twiml.redirect({
       method: 'GET'
     }, '/redcarpet_incoming?Timeout=1');
