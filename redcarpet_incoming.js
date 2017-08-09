@@ -22,10 +22,10 @@ exports.handler = function (context, event, callback) {
   gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Goodbye.mp3');
   gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Didnt_Hear_Response.mp3');
   gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Connect_To_ThousandOaks.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Connect_To_ConogaPark.mp3');
+  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Connect_To_CanogaPark.mp3');
   gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Connect_To_ManhattanBeach.mp3');
   gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_ThousandOaks.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_ConogaPark.mp3');
+  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_CanogaPark.mp3');
   gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_ManhattanBeach.mp3');
 
   // End-user did not enter anything ...
