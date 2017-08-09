@@ -16,26 +16,19 @@ exports.handler = function (context, event, callback) {
   // gather.say('To leave a message with our customer service department press 0.');
 
   gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Thanks_For_Calling.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Thanks_For_Calling_Customer_Service.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Message_For_Customer_Service.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Leave_A_Message.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Goodbye.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Didnt_Hear_Response.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Connect_To_ThousandOaks.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Connect_To_CanogaPark.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Connect_To_ManhattanBeach.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_ThousandOaks.mp3');
+  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_ManhattanBeach.mp3');  
   gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_CanogaPark.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_ManhattanBeach.mp3');
+  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_ThousandOaks.mp3');
+  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Message_For_Customer_Service.mp3');
 
   // End-user did not enter anything ...
   if (event.Timeout == 1) {
     // twiml.say('Thanks for calling Red Carpet Car Wash, goodbye.');
-    gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Goodbye.mp3');
+    twiml.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Goodbye.mp3');
     twiml.hangup();
   } else {
     // twiml.say('Sorry, I didn\'t get your response.');
-    gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Didnt_Hear_Response.mp3');
+    twiml.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Didnt_Hear_Response.mp3');
     twiml.redirect({
       method: 'GET'
     }, '/redcarpet_incoming?Timeout=1');
