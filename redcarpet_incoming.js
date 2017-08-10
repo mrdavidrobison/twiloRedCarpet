@@ -15,11 +15,11 @@ exports.handler = function (context, event, callback) {
   // gather.say('To call our Thousand Oaks location press 3.');
   // gather.say('To leave a message with our customer service department press 0.');
 
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Thanks_For_Calling.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_ManhattanBeach.mp3');  
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_CanogaPark.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_ThousandOaks.mp3');
-  gather.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Message_For_Customer_Service.mp3');
+  twiml.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Thanks_For_Calling.mp3');
+  twiml.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_ManhattanBeach.mp3');  
+  twiml.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_CanogaPark.mp3');
+  twiml.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Call_ThousandOaks.mp3');
+  twiml.play('https://labored-passenger-8620.twil.io/assets/Red_Carpet_Car_Wash_Message_For_Customer_Service.mp3');
 
   // End-user did not enter anything ...
   if (event.Timeout == 1) {
