@@ -12,10 +12,13 @@ echo '<Response></Response>'; // Place the desired response (if any) here.
 * This section actually sends the email.
 */
 
+$From = $_GET['From'];
+$RecordingUrl = $_GET['RecordingUrl'];
+
 /* Your email address. */
-$to = "david@stormyourmarket.com";
-$subject = "Message from {$_REQUEST['From']}";
-$message = "You have received a message from {$_REQUEST['From']}.";
-$message .= "To listen to this message, please visit this URL: {$_REQUEST['RecordingUrl']}";
+$to = "info@redcarpetusa.com";
+$subject = "Red Carpet Car Wash Voicemail: $From";
+$message = "You have received a message from $From\n\n";
+$message .= "To listen to this message, please visit this URL: $RecordingUrl";
 $headers = "From: webmaster@example.com"; // Who should it come from?
 mail($to, $subject, $message, $headers);
